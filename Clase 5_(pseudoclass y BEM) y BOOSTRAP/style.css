@@ -1,0 +1,20 @@
+.main_link--google:hover{
+
+    background-color: black;
+    color: red;
+    font-size: 50px;
+    
+
+}
+
+/* HOVER: hace que cuando pongo el mousse sobre el link, me va a cambiar las propiedades */
+
+.footer_boton--click:hover{
+    background-color: aqua;
+}
+
+.footer_boton--click:active{
+    background-color: green;
+    transition: 3s;
+}
+/* ACTIVE: hace que cuando presiono el boton me lo cambia de color. Tengo que ACTIVARLO */

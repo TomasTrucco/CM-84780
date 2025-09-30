@@ -1,0 +1,76 @@
+* {
+
+    padding: 0%;
+    margin: 0%;
+
+}
+
+.conteiner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header titulo titulo"
+    "sidebar comprar vender"
+    "sidebar crear footer";
+}
+
+
+.header{
+    grid-area: header;
+    background-color: blue;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: red;
+}
+
+.titulo{
+    grid-area: titulo;
+    background-color: yellow;
+
+}
+
+.compra{
+    grid-area: comprar;
+    background-color: brown;
+
+}
+
+.vender{
+    grid-area: vender;
+    background-color: rgb(245, 150, 150);
+
+
+}
+
+.crear{
+    grid-area: crear;
+    background-color: rgb(150, 199, 245);
+
+
+}
+
+.footer{
+    grid-area: footer;
+    background-color: rgb(247, 110, 110);
+}
+
+/* .cuadrado {
+
+    background-color:coral;
+
+    height: 2cm;
+    width: 2cm;
+}
+
+.link{
+
+    background-color: rgb(124, 252, 19);
+}
+
+.subrayado{
+
+    background-color: coral;
+} */

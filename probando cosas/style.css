@@ -1,0 +1,32 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.body{
+    display: grid;
+    grid-template-columns: 100px 300px 300px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px;
+    grid-template-areas: 
+    "sidebar header header"
+    "sidebar main main"
+    "footer footer footer";
+}
+
+.header{
+    grid-area: header;
+    background-color: red
+}
+    
+.sidebar{
+    grid-area: sidebar;
+}
+
+.main{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+}

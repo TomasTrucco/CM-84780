@@ -1,0 +1,47 @@
+*{
+
+    margin: 0%;
+    padding: 0%;
+
+}
+/* esto hace que los margenes y los espacios se seteen a 0. Esto hace que "tome el control al 100%" 
+yo elijo los valores que quiero donde quiero*/ /* SIEMPRE PONERLO CUANDO COMIENZO AL PRINCIPIO */
+
+.titulo {
+    color: red;
+}
+
+.segundotitulo {
+    color: violet;
+    background-color: red;
+    margin: 5%;
+}
+/* le agrego color rojo a .titulo y color violeta, y color rojo de fondo a .segundotitulo
+estas palabras son las etiquetas, las marque en el html, son las "class" */ /* le agrego margen de 5% */
+
+#masimportante {
+    background-color: coral;
+} 
+/* el "#" se refiere al "id" el "id" es mas importante que el "class"*/
+
+
+.pochoclo {
+    color: darkred;
+    background-color: black;
+}
+
+
+.cuadradito {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    margin-top: 100px;
+    margin-left: 100px;
+    border: 10px solid black;
+}
+
+.textocuadrado{
+    text-align: center;
+    padding: 20%;
+    font-size: larger;
+}
