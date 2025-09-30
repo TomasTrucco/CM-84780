@@ -1,0 +1,112 @@
+:root{
+  --bg: #eceff2;
+  --panel: #f0f4f8;
+  --muted: #6a7480;
+  --accent: #1e66b3;
+  --card-border: #d9e8fb;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif; color: #222; background: var(--bg); }
+
+/* 1) Contenedor general: columna flex que ocupa toda la ventana */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ocupa toda la altura disponible */
+}
+
+/* top bar (barra superior del screenshot) */
+.topbar {
+  height: 38px;
+  background: #cfd8de;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 13px;
+  color: #263238;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+/* 2) Layout principal: fila que contiene sidebar (fixed width) + content (flexible) */
+.main {
+  display: flex;
+  flex: 1; /* crece para llenar el resto de la altura */
+}
+
+/* Sidebar con ancho fijo, columna flex para apilar brand + nav */
+.sidebar {
+  width: 220px;
+  background: var(--panel);
+  border-right: 1px solid rgba(0,0,0,.06);
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* marca en sidebar */
+.brand .logo { font-size: 22px; }
+.brand h1 { margin: 6px 0 0; font-size: 16px; }
+.brand .tag { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
+
+/* nav simple */
+.nav ul { list-style: none; padding: 0; margin: 10px 0 0; }
+.nav li { margin: 8px 0; font-size: 13px; }
+.nav a { color: var(--accent); text-decoration: none; }
+
+/* 3) Content: ocupa el espacio restante y usa columna flex para ordenar contenido verticalmente */
+.content {
+  flex: 1;
+  padding: 28px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* por defecto estira en ancho */
+}
+
+/* breadcrumbs y título */
+.breadcrumb { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+.page-title { font-size: 28px; margin: 0 0 22px; color: #222; }
+
+/* 4) Contenedor de tarjetas — importante: usamos Flexbox con wrap y un max-width
+   para forzar 2 tarjetas en la primera fila y la 3era centrada en la fila de abajo */
+.cards {
+  display: flex;
+  flex-wrap: wrap;          /* permite salto de línea */
+  gap: 28px;                /* espacio entre tarjetas */
+  justify-content: center;  /* centra las filas */
+  width: 100%;
+  max-width: 520px;         /* al limitar el ancho conseguimos 2 por fila en pantallas de escritorio */
+  margin: 0 auto 40px;      /* centrado horizontalmente en la página */
+}
+
+/* estilo de cada tarjeta */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 150px;
+  background: white;
+  border: 3px solid var(--card-border);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 20px;
+  box-shadow: 0 2px 0 rgba(0,0,0,.03);
+}
+
+/* Hover pequeño para tarjeta clickable */
+.card:hover { transform: translateY(-4px); transition: transform .18s ease; }
+
+/* footer dentro del content (social links centrados) */
+.content-footer { margin-top: auto; } /* empuja el footer hacia abajo si hay espacio */
+.socials { display:flex; justify-content:center; gap:18px; color: var(--muted); font-size: 13px; }
+
+/* adaptaciones responsivas */
+@media (max-width: 760px) {
+  .sidebar { display: none; } /* esconder sidebar en pantallas pequeñas */
+  .cards { max-width: 420px; gap: 18px; }
+  .card { width: 180px; height: 140px; font-size: 18px; }
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GenioMonstruo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app"> <!-- contenedor general (column flex) -->
+    <div class="topbar">GenioMonstruo Web App</div>
+
+    <div class="main"> <!-- fila principal: sidebar + content -->
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">🧠</div>
+          <h1>GenioMonstruo</h1>
+          <p class="tag">Tu mercado para la compra de Monstruo.</p>
+        </div>
+
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Cuenta.html">Tu cuenta</a></li>
+            <li><a href="Compra.html">Comprar</a></li>
+            <li><span>Mas vendidos</span></li>
+            <li><span>Colecciones</span></li>
+            <li><span>En oferta</span></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a href="Arma el tuyo.html">Arma el tuyo</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <div class="breadcrumb">Inicio</div>
+
+        <h2 class="page-title">¿Que queres hacer hoy?</h2>
+
+        <!-- contenedor flex de tarjetas: usamos flex-wrap para que las tarjetas salten a la línea siguiente -->
+        <div class="cards">
+          <a class="card" href="Compra.html">Comprar</a>
+          <div class="card">Vender</div> <!-- si no hay página, dejo un div -->
+          <a class="card" href="Arma el tuyo.html">Crear</a>
+        </div>
+
+        <footer class="content-footer">
+          <div class="socials">
+            <span>Instagram</span>
+            <span>Twitter</span>
+            <span>YouTube</span>
+          </div>
+        </footer>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
